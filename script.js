@@ -1,25 +1,62 @@
-console.log("Wéber István");
+console.log("Műkszik");
 
-let city = "Kapuvár";
-let country = " Magyarország";
+function greeting(firstName, lastName) {
+    console.log("Adjisten, " + firstName + " " + lastName + "!");
+}
 
-console.log(city + country);
+greeting("Max", "Cavalera");
+greeting("Wéber", "István");
+greeting("Varga", "Szabolcs");
 
-let x = 9;
+function multi(number1, number2) {
+    if (typeof number1 !== 'number' || typeof number2 !== 'number') {
+        console.log("Hibás paraméter: " + (typeof number1 !== 'number' ? number1 : number2));
+    }   
+    return number1 * number2;
+}
 
-console.log(x);
+let outCome = multi(3, 3);
+console.log("A két szám összege: " + outCome);
 
-console.log(x + 1);
+let outCome2 = multi(5, 8);
+console.log("A két szám összege: " + outCome2);
 
-let y = 20;
+let outCome3 = multi(324, 610);
+console.log("A két szám összege: " + outCome3);
 
-console.log(x + y);
+let outCome4 = multi("nyuszi", "gekko");
 
-console.log(x * y);
 
-let z = 2641;
+let szamok = [3,6,12,53,86,43,934,201,53,87];
 
-console.log(2641 / 7);
+console.log(szamok[4]);
 
-let favouritePet = prompt("Mi a kedvenc állatod?");
-console.log("A kedvenc állatod a t" + favouritePet);
+for (let index = 0; index < szamok.length; index++){
+    console.log(szamok[index]);
+}
+
+console.log("A számok háromszorosa: ");
+
+for (let index = 0; index < szamok.length; index++){
+    console.log(szamok[index]*3);
+}
+
+console.log("A számok háromszorosa minusz 1: ");
+
+for (let index = 0; index < szamok.length; index++){
+    let eredmeny = (szamok[index] * 3) - 1;
+    console.log(eredmeny);
+}
+
+console.log("Páratlan számok: ");
+
+for (let index = 0; index < szamok.length; index++){
+    if (szamok[index] % 2 !== 0) {
+        console.log(szamok[index]);
+    }
+}
+
+
+
+
+
